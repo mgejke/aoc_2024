@@ -1,6 +1,7 @@
 import click
 import importlib
 from pathlib import Path
+from timeit import default_timer as timer
 
 
 @click.command
@@ -9,7 +10,10 @@ from pathlib import Path
 def main(day: str, example: bool):
     day_solution = importlib.import_module(f"solutions.day{day}.solution")
 
+    start = timer()
     r1, r2 = day_solution.main(Path(f"solutions/day{day}"), example)
+    elapsed = timer() - start
+    print(f"Elapsed: {elapsed:.6f}s")
 
     print(r1)
     print(r2)

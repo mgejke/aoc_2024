@@ -1,7 +1,7 @@
 from pathlib import Path
 import re
 
-from solutions.common import get_clean_data, get_rows
+from solutions.common import get_clean_data
 
 
 test_data = """
