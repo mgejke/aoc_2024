@@ -15,8 +15,8 @@ def main(day: str, example: bool):
     elapsed = timer() - start
     print(f"Elapsed: {elapsed:.6f}s")
 
-    print(r1)
-    print(r2)
+    print(f"1: {r1}")
+    print(f"2: {r2}")
 
 
 if __name__ == "__main__":
